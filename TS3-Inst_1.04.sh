@@ -31,7 +31,7 @@ echo "Run the command = #cp "$BASH_SOURCE".FirstRun "$BASH_SOURCE""
 echo ""
 echo "**************************************************************************************"
 echo "** For security reasons Teamspeak3 must be installed under a uniqe and new username **"
-echo "**   please specify why to be created (leave empty for the default ts3srv user)     **"
+echo "**  please write a username to be created (leave empty for the default ts3srv user) **"
 echo "**************************************************************************************"
 
 read TS3USER
