@@ -24,7 +24,7 @@ if [ $TS_New_Version = $TS_Current_Version ]
 		sudo docker cp ./teamspeak3-server_linux_amd64 $TS3CONTAINER:/opt/teamspeak3server/
 		sudo docker start $TS3CONTAINER
 		sleep 1
-		dsudo ocker exec $TS3CONTAINER chown -R $TS3USER: $TS3PATH
+		sudo ocker exec $TS3CONTAINER chown -R $TS3USER: $TS3PATH
 		echo $TS_New_Version > CurrentTSversion
 		sudo docker cp CurrentTSversion $TS3CONTAINER:/var/log/teamspeak/CurrentTSversion
 		sudo docker exec $TS3CONTAINER kill -9 1
