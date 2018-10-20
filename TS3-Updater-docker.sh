@@ -1,7 +1,7 @@
 #!/bin/bash
 INSTCOMM="apt"
 if ! command -v curl &> /dev/null ; then sudo $INSTCOMM install curl -y; fi
-TS_New_Version=$(curl -s https://www.teamspeak.com/en/downloads.html#server | grep teamspeak3-server_linux_amd64- | grep -m 1 -o -P '(?<=amd64-).*(?=.tar.bz2)')
+TS_New_Version=$(curl -s https://www.teamspeak.com/en/downloads/#server | grep teamspeak3-server_linux_amd64- | grep -m 1 -o -P '(?<=amd64-).*(?=.tar.bz2)')
 TS_Current_Version=$(sudo docker exec centos-ts3 cat /var/log/teamspeak/CurrentTSversion)
 echo "Cloud Version = $TS_New_Version"
 echo "Current installed version $TS_Current_Version"
