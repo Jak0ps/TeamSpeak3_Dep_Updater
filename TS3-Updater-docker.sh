@@ -14,7 +14,7 @@ if [ $TS_New_Version = $TS_Current_Version ]
 		if ! command -v tar &> /dev/null ; then sudo $INSTCOMM install tar -y; fi
 		if ! command -v bzip2 &> /dev/null ; then sudo $INSTCOMM install bzip2 -y; fi
 		echo "Downloading version $TS_New_Version"
-		wget --no-check-certificate https://teamspeak.gameserver.gamed.de/ts3/releases/$TS_New_Version/teamspeak3-server_linux_amd64-$TS_New_Version.tar.bz2
+		wget --no-check-certificate https://files.teamspeak-services.com/releases/server/$TS_New_Version/teamspeak3-server_linux_amd64-$TS_New_Version.tar.bz2
 		TS3CONTAINER="centos-ts3"
 		TS3USER=$(sudo docker exec $TS3CONTAINER grep User /var/log/teamspeak/Details | cut -d "=" -f 2)
 		TS3PATH=$(sudo docker exec $TS3CONTAINER grep Path /var/log/teamspeak/Details | cut -d "=" -f 2)
